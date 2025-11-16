@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ПСИХОМИР - Пространство психологических программ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,18 +25,33 @@
         </header>
 
         <section class="invitation">
-            <h2>Приглашаем всех желающих!</h2>
-            <div class="highlight-box">
-                <p class="free">Участие — бесплатно!</p>
-                <div class="contact-info">
-                    <p><strong>Запись по телефону:</strong> <a href="tel:89150620177">8 915 062-01-77</a></p>
-                    <p><strong>Адрес:</strong> ул. Студенческая, д. 35</p>
+            <h2 class="section-title">Приглашаем всех желающих!</h2>
+
+            <div class="info-grid">
+                <div class="info-card free-card">
+                    <div class="card-icon">✨</div>
+                    <p class="free-text">УЧАСТИЕ</p>
+                    <p class="free-value">Бесплатно!</p>
+                </div>
+
+                <div class="info-card contact-card">
+                    <div class="card-icon">📞</div>
+                    <p class="contact-label">Запись по телефону</p>
+                    <a href="tel:89150620177" class="phone-number">8 915 062-01-77</a>
+                </div>
+
+                <div class="info-card address-card">
+                    <div class="card-icon">📍</div>
+                    <p class="contact-label">Адрес проведения</p>
+                    <p class="address">ул. Студенческая, д. 35</p>
                 </div>
             </div>
         </section>
 
         <section class="description">
-            <p>Вы сможете познакомиться с множеством специально подобранных эффективных практик, которые гармонично сочетаются между собой, дополняя друг друга и делая жизнь счастливее.</p>
+            <div class="description-content">
+                <p class="description-text">Вы сможете познакомиться с множеством специально подобранных эффективных практик, которые гармонично сочетаются между собой, дополняя друг друга и делая жизнь счастливее.</p>
+            </div>
         </section>
 
         <section class="schedule">
