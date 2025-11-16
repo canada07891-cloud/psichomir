@@ -1,0 +1,340 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Видео фон */
+.video-background {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 70%;
+    min-height: 70%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+}
+
+#bgVideo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 0 80px rgba(138, 43, 226, 0.3);
+}
+
+/* Темный оверлей для лучшей читаемости */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Заголовок */
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.2));
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(138, 43, 226, 0.3);
+    box-shadow: 0 8px 32px rgba(138, 43, 226, 0.2);
+}
+
+.logo {
+    font-size: 4em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #9b59b6, #e74c3c, #f39c12);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    text-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 10px rgba(155, 89, 182, 0.5));
+    }
+    to {
+        filter: drop-shadow(0 0 20px rgba(155, 89, 182, 0.8));
+    }
+}
+
+.tagline {
+    font-size: 1.4em;
+    color: #e0e0e0;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Приглашение */
+.invitation {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.invitation h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #f39c12;
+    text-shadow: 0 0 20px rgba(243, 156, 18, 0.5);
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, rgba(231, 76, 60, 0.15), rgba(155, 89, 182, 0.15));
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(231, 76, 60, 0.3);
+    box-shadow: 0 8px 32px rgba(231, 76, 60, 0.2);
+}
+
+.free {
+    font-size: 2em;
+    font-weight: bold;
+    color: #2ecc71;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(46, 204, 113, 0.5);
+}
+
+.contact-info {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #3498db;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-info a:hover {
+    color: #5dade2;
+    border-bottom: 2px solid #5dade2;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+/* Описание */
+.description {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 60px;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    line-height: 1.8;
+    color: #ecf0f1;
+}
+
+/* Расписание */
+.schedule {
+    margin-bottom: 60px;
+}
+
+.day-block {
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, rgba(52, 73, 94, 0.3), rgba(44, 62, 80, 0.3));
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(52, 152, 219, 0.3);
+    box-shadow: 0 8px 32px rgba(52, 152, 219, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.day-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(52, 152, 219, 0.25);
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(52, 152, 219, 0.5);
+    flex-wrap: wrap;
+}
+
+.day-header h3 {
+    font-size: 2em;
+    color: #3498db;
+    text-shadow: 0 0 15px rgba(52, 152, 219, 0.4);
+}
+
+.date {
+    font-size: 1.8em;
+    color: #e74c3c;
+    font-weight: bold;
+    background: rgba(231, 76, 60, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(231, 76, 60, 0.4);
+}
+
+/* Сессии */
+.sessions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.session {
+    display: flex;
+    gap: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border-left: 4px solid #9b59b6;
+    transition: all 0.3s ease;
+}
+
+.session:hover {
+    background: rgba(155, 89, 182, 0.15);
+    transform: translateX(10px);
+    border-left-color: #e74c3c;
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.3);
+}
+
+.time {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #f39c12;
+    min-width: 70px;
+    text-shadow: 0 0 10px rgba(243, 156, 18, 0.4);
+}
+
+.session-content h4 {
+    font-size: 1.4em;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.session-content p {
+    color: #bdc3c7;
+    line-height: 1.7;
+    font-size: 1.05em;
+}
+
+/* Футер */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    color: #95a5a6;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 2.5em;
+    }
+
+    .tagline {
+        font-size: 1.1em;
+    }
+
+    .invitation h2 {
+        font-size: 1.8em;
+    }
+
+    .free {
+        font-size: 1.5em;
+    }
+
+    .contact-info {
+        font-size: 1em;
+    }
+
+    .description {
+        font-size: 1.1em;
+    }
+
+    .day-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .day-header h3 {
+        font-size: 1.5em;
+    }
+
+    .date {
+        font-size: 1.3em;
+    }
+
+    .session {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .time {
+        font-size: 1.3em;
+    }
+
+    .session-content h4 {
+        font-size: 1.2em;
+    }
+
+    .video-background {
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    #bgVideo {
+        border-radius: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .logo {
+        font-size: 2em;
+    }
+
+    .hero {
+        padding: 20px 10px;
+    }
+}
