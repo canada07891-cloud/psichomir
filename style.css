@@ -69,22 +69,52 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 5em;
     font-weight: 900;
-    background: linear-gradient(135deg, #9b59b6, #e74c3c, #f39c12);
+    background: linear-gradient(135deg, #c471ed, #ff6b6b, #ffd93d, #6bcfff, #c471ed);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     margin-bottom: 25px;
     letter-spacing: 5px;
     text-shadow: 0 0 30px rgba(155, 89, 182, 0.5);
-    animation: glow 2s ease-in-out infinite alternate;
+    animation: gradientShift 6s ease infinite, glow 2s ease-in-out infinite alternate, fadeInScale 1.5s ease-out;
+    position: relative;
 }
 
+/* Анимация плавного появления с масштабированием */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* Анимация перетекающего градиента */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Базовое свечение */
 @keyframes glow {
     from {
-        filter: drop-shadow(0 0 10px rgba(155, 89, 182, 0.5));
+        filter: drop-shadow(0 0 15px rgba(155, 89, 182, 0.6));
     }
     to {
-        filter: drop-shadow(0 0 20px rgba(155, 89, 182, 0.8));
+        filter: drop-shadow(0 0 25px rgba(155, 89, 182, 0.9));
     }
 }
 
