@@ -103,6 +103,15 @@
     animation: gradientShift 6s ease infinite, glow 2s ease-in-out infinite alternate;
 }
 
+/* Responsive logo text */
+.logo-mobile {
+    display: none;
+}
+
+.logo-full {
+    display: inline;
+}
+
 /* Certificate showcase */
 .certificate-showcase {
     padding: 3rem 1rem 5rem;
@@ -116,14 +125,30 @@
     position: relative;
     max-width: 700px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.05);
+    background-image: url('images/cert.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     backdrop-filter: blur(20px);
     border-radius: 30px;
     padding: 3rem 2rem;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 30px 80px rgba(138, 43, 226, 0.5);
+    border: 3px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 30px 80px rgba(138, 43, 226, 0.6), 0 0 60px rgba(255, 215, 0, 0.3);
     animation: floatCard 6s ease-in-out infinite;
     overflow: hidden;
+}
+
+.certificate-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.3), rgba(255, 105, 180, 0.2));
+    backdrop-filter: blur(5px);
+    z-index: 0;
+    border-radius: 30px;
 }
 
 @keyframes floatCard {
@@ -174,6 +199,7 @@
     margin-bottom: 1.5rem;
     letter-spacing: 3px;
     animation: shimmerText 3s ease-in-out infinite;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 @keyframes shimmerText {
@@ -197,8 +223,10 @@
 .certificate-description {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #fff;
     margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8), 0 0 20px rgba(138, 43, 226, 0.5);
+    font-weight: 500;
 }
 
 .certificate-brand {
@@ -206,7 +234,7 @@
     font-size: 3rem;
     font-weight: 900;
     color: #fff;
-    text-shadow: 0 0 20px rgba(196, 113, 237, 0.8);
+    text-shadow: 0 0 30px rgba(196, 113, 237, 1), 0 4px 8px rgba(0, 0, 0, 0.8);
     margin: 1rem 0;
     letter-spacing: 5px;
 }
@@ -214,9 +242,11 @@
 .certificate-subtitle {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: #fff;
     margin-bottom: 2rem;
     line-height: 1.6;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+    font-weight: 500;
 }
 
 .certificate-format {
@@ -528,6 +558,19 @@
 }
 
 @media (max-width: 480px) {
+    /* Switch to mobile logo text */
+    .logo-full {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline;
+    }
+
+    .certificate-hero .logo {
+        font-size: 3em;
+    }
+
     .certificate-title {
         font-size: 1.6rem;
         letter-spacing: 2px;
@@ -552,5 +595,9 @@
 
     .modal-title {
         font-size: 1.6rem;
+    }
+
+    .certificate-card {
+        padding: 2.5rem 1.5rem;
     }
 }
