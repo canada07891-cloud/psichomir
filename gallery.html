@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея - ПСИХОМИР</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="gallery-page">
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo">
+            <source src="bg.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+        <header class="hero gallery-hero">
+            <h1 class="logo">ГАЛЕРЕЯ</h1>
+            <p class="tagline">День открытых дверей — Ноябрь 2025</p>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">🏠 Главная</a>
+                <a href="index.html#schedule" class="nav-link">Программа</a>
+                <a href="gallery.html" class="nav-link active">📸 Галерея</a>
+            </nav>
+        </header>
+
+        <section class="gallery-intro">
+            <div class="intro-content">
+                <p class="intro-text">В ноябре состоялось открытие нашего проекта, оставившее незабываемые впечатления: полезную психологическую информацию и прекрасное настроение!</p>
+            </div>
+        </section>
+
+        <section class="photo-gallery">
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Photos will be loaded here dynamically -->
+            </div>
+        </section>
+
+        <!-- Lightbox modal -->
+        <div class="lightbox" id="lightbox">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <span class="prev-btn" id="prevBtn">&#10094;</span>
+            <span class="next-btn" id="nextBtn">&#10095;</span>
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            <div class="image-counter" id="imageCounter"></div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 ПСИХОМИР. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="gallery.js"></script>
+</body>
+</html>
