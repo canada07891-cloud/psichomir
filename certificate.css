@@ -1,0 +1,556 @@
+/* Cosmic Background */
+.cosmic-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    overflow: hidden;
+}
+
+/* Animated stars layers */
+.stars,
+.stars2,
+.stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+}
+
+.stars {
+    background-image:
+        radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 50px, #ddd, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 130px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 90px 10px, #fff, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    animation: twinkle 5s ease-in-out infinite;
+}
+
+.stars2 {
+    background-image:
+        radial-gradient(1px 1px at 100px 150px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 200px 200px, #eee, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 50px 100px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 250px 250px;
+    animation: twinkle 7s ease-in-out infinite reverse;
+}
+
+.stars3 {
+    background-image:
+        radial-gradient(1px 1px at 150px 80px, #fff, rgba(0,0,0,0)),
+        radial-gradient(2px 2px at 80px 120px, #eee, rgba(0,0,0,0)),
+        radial-gradient(1px 1px at 180px 180px, #ddd, rgba(0,0,0,0));
+    background-repeat: repeat;
+    background-size: 300px 300px;
+    animation: twinkle 10s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+/* Nebula effect */
+.nebula {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(138, 43, 226, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(255, 105, 180, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 70%, rgba(196, 113, 237, 0.1) 0%, transparent 50%);
+    animation: nebulaFloat 20s ease-in-out infinite;
+}
+
+@keyframes nebulaFloat {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(50px, -30px) scale(1.1); }
+    66% { transform: translate(-30px, 40px) scale(0.9); }
+}
+
+.overlay-cosmic {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Certificate page specific */
+.certificate-page .hero {
+    min-height: 30vh;
+    margin-bottom: 2rem;
+}
+
+.certificate-hero .logo {
+    font-size: 3.5em;
+    background: linear-gradient(135deg, #ffd700, #ff69b4, #8a2be2, #00bfff);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 6s ease infinite, glow 2s ease-in-out infinite alternate;
+}
+
+/* Certificate showcase */
+.certificate-showcase {
+    padding: 3rem 1rem 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+.certificate-card {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 30px 80px rgba(138, 43, 226, 0.5);
+    animation: floatCard 6s ease-in-out infinite;
+    overflow: hidden;
+}
+
+@keyframes floatCard {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.certificate-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+    animation: rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.certificate-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.certificate-badge {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.certificate-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ffd700, #ff69b4, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1.5rem;
+    letter-spacing: 3px;
+    animation: shimmerText 3s ease-in-out infinite;
+}
+
+@keyframes shimmerText {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.certificate-divider {
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+    margin: 1.5rem auto;
+    animation: expandContract 2s ease-in-out infinite;
+}
+
+@keyframes expandContract {
+    0%, 100% { width: 80px; }
+    50% { width: 120px; }
+}
+
+.certificate-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+}
+
+.certificate-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 900;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(196, 113, 237, 0.8);
+    margin: 1rem 0;
+    letter-spacing: 5px;
+}
+
+.certificate-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.certificate-format {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.format-item {
+    background: rgba(255, 215, 0, 0.15);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.format-item:hover {
+    background: rgba(255, 215, 0, 0.25);
+    border-color: rgba(255, 215, 0, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+}
+
+/* Buy button */
+.buy-button {
+    position: relative;
+    margin-top: 2.5rem;
+    padding: 1.2rem 3rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #ffd700, #ff69b4, #8a2be2);
+    background-size: 200% 200%;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
+    transition: all 0.3s ease;
+    animation: buttonPulse 2s ease-in-out infinite;
+}
+
+@keyframes buttonPulse {
+    0%, 100% {
+        box-shadow: 0 15px 40px rgba(255, 105, 180, 0.5);
+    }
+    50% {
+        box-shadow: 0 20px 60px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 215, 0, 0.6);
+    }
+}
+
+.buy-button:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 25px 70px rgba(255, 105, 180, 0.9), 0 0 50px rgba(255, 215, 0, 0.8);
+}
+
+.buy-button:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.button-text {
+    position: relative;
+    z-index: 2;
+}
+
+.button-shine {
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: rotate(25deg);
+    animation: buttonShine 3s linear infinite;
+}
+
+@keyframes buttonShine {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: linear-gradient(135deg, rgba(20, 20, 50, 0.95), rgba(40, 20, 60, 0.95));
+    backdrop-filter: blur(20px);
+    padding: 3rem 2.5rem;
+    border-radius: 25px;
+    border: 2px solid rgba(196, 113, 237, 0.4);
+    box-shadow: 0 30px 80px rgba(138, 43, 226, 0.6);
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    animation: slideUp 0.4s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    color: #ff69b4;
+    transform: rotate(90deg);
+}
+
+.modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-shadow: 0 0 20px rgba(196, 113, 237, 0.6);
+}
+
+/* Form styles */
+.certificate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.form-group input {
+    padding: 1rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgba(196, 113, 237, 0.6);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 20px rgba(196, 113, 237, 0.4);
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.submit-button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #8a2be2, #ff69b4);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(138, 43, 226, 0.6);
+}
+
+/* Success modal */
+.success-content {
+    text-align: center;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #fff;
+    animation: successPop 0.5s ease;
+}
+
+@keyframes successPop {
+    0% { transform: scale(0); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+.success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.close-success-btn {
+    padding: 0.8rem 2.5rem;
+    background: linear-gradient(135deg, #8a2be2, #ff69b4);
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-success-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .certificate-card {
+        padding: 2rem 1.5rem;
+    }
+
+    .certificate-title {
+        font-size: 2rem;
+    }
+
+    .certificate-brand {
+        font-size: 2.2rem;
+    }
+
+    .certificate-badge {
+        font-size: 3rem;
+    }
+
+    .format-item {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+    }
+
+    .buy-button {
+        font-size: 1.1rem;
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .certificate-title {
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    .certificate-brand {
+        font-size: 1.8rem;
+        letter-spacing: 3px;
+    }
+
+    .certificate-subtitle {
+        font-size: 1rem;
+    }
+
+    .format-item {
+        font-size: 0.85rem;
+    }
+
+    .modal-content {
+        padding: 2rem 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.6rem;
+    }
+}

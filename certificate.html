@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подарочный сертификат - ПСИХОМИР</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Montserrat:wght@300;400;600;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="certificate.css">
+</head>
+<body class="certificate-page">
+    <!-- Cosmic animated background -->
+    <div class="cosmic-background">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+        <div class="nebula"></div>
+    </div>
+
+    <div class="overlay-cosmic"></div>
+
+    <div class="container">
+        <header class="hero certificate-hero">
+            <h1 class="logo">СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</h1>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">🏠 Главная</a>
+                <a href="index.html#schedule" class="nav-link">Программа</a>
+                <a href="gallery.html" class="nav-link">📸 Галерея</a>
+                <a href="certificate.html" class="nav-link promo-btn active">🎁 Акция</a>
+            </nav>
+        </header>
+
+        <section class="certificate-showcase">
+            <div class="certificate-card">
+                <div class="certificate-glow"></div>
+                <div class="certificate-content">
+                    <div class="certificate-badge">🎁</div>
+                    <h2 class="certificate-title">ПОДАРОЧНЫЙ СЕРТИФИКАТ</h2>
+                    <div class="certificate-divider"></div>
+                    <p class="certificate-description">на посещение одного занятия проекта</p>
+                    <h3 class="certificate-brand">ПСИХОМИР</h3>
+                    <p class="certificate-subtitle">психологические программы и оздоровительные практики</p>
+                    <div class="certificate-format">
+                        <span class="format-item">👥 Групповой формат</span>
+                        <span class="format-item">👤 Индивидуальный формат</span>
+                    </div>
+                    <button class="buy-button" id="buyButton">
+                        <span class="button-text">Приобрести</span>
+                        <span class="button-shine"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Modal -->
+        <div class="modal" id="contactModal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeModal">&times;</span>
+                <h2 class="modal-title">Оформление сертификата</h2>
+                <form id="certificateForm" class="certificate-form">
+                    <div class="form-group">
+                        <label for="userName">Ваше имя</label>
+                        <input type="text" id="userName" name="userName" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPhone">Номер телефона</label>
+                        <input type="tel" id="userPhone" name="userPhone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <button type="submit" class="submit-button">
+                        <span>Отправить</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Success Message Modal -->
+        <div class="modal" id="successModal">
+            <div class="modal-content success-content">
+                <div class="success-icon">✓</div>
+                <h2 class="success-title">Благодарим за обращение!</h2>
+                <p class="success-message">Скоро с Вами свяжемся для уточнения деталей</p>
+                <button class="close-success-btn" id="closeSuccess">Закрыть</button>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 ПСИХОМИР. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="certificate.js"></script>
+</body>
+</html>

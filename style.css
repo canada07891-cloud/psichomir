@@ -665,6 +665,64 @@ footer {
     border-color: rgba(196, 113, 237, 0.4);
 }
 
+/* Promo button with special animation */
+.promo-btn {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 105, 180, 0.3), rgba(138, 43, 226, 0.3));
+    border: 2px solid;
+    border-image: linear-gradient(135deg, #ffd700, #ff69b4, #8a2be2) 1;
+    animation: pulseGlow 2s ease-in-out infinite, shimmer 3s linear infinite;
+    position: relative;
+    overflow: hidden;
+    font-weight: 700;
+}
+
+.promo-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s linear infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 0 40px rgba(255, 105, 180, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 0 0 60px rgba(255, 105, 180, 0.6), 0 0 80px rgba(138, 43, 226, 0.4);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+.promo-btn:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.9), 0 0 80px rgba(255, 105, 180, 0.7), 0 0 100px rgba(138, 43, 226, 0.5);
+}
+
 /* Invitation subtitle */
 .invitation-subtitle {
     font-family: 'Cormorant Garamond', serif;
