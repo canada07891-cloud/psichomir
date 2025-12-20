@@ -145,7 +145,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.65), rgba(20, 10, 40, 0.7));
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(20, 10, 40, 0.45));
     backdrop-filter: blur(0.5px);
     z-index: 0;
     border-radius: 30px;
