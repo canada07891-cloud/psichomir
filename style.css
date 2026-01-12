@@ -1396,3 +1396,210 @@ footer {
         font-size: 1.8rem;
     }
 }
+
+/* ============================================
+   PROGRAMS CATALOG STYLES
+   ============================================ */
+
+.programs-catalog {
+    padding: 4rem 1rem;
+}
+
+.catalog-intro {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.catalog-description {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 1rem;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.program-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(210, 105, 30, 0.25);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(210, 105, 30, 0.5);
+    box-shadow: 0 20px 40px rgba(210, 105, 30, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.program-card-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.program-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.program-card:hover .program-card-image img {
+    transform: scale(1.1);
+}
+
+.program-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.program-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.program-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.75rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.program-card-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.program-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.program-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.program-info-item .info-icon {
+    font-size: 1.3rem;
+    opacity: 0.9;
+}
+
+.program-info-item .info-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 400;
+}
+
+.program-card-footer {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(210, 105, 30, 0.2);
+}
+
+.program-card-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #d2691e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.program-card:hover .program-card-link {
+    color: #ff8c42;
+    transform: translateX(5px);
+}
+
+/* Placeholder программы */
+.program-card-placeholder {
+    cursor: default;
+    opacity: 0.6;
+}
+
+.program-card-placeholder:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.placeholder-image {
+    background: linear-gradient(135deg, rgba(210, 105, 30, 0.2), rgba(138, 43, 226, 0.2));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    font-size: 4rem;
+    opacity: 0.5;
+}
+
+.placeholder-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .program-card-image {
+        height: 200px;
+    }
+
+    .program-card-title {
+        font-size: 1.5rem;
+    }
+
+    .catalog-description {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .programs-catalog {
+        padding: 3rem 0.5rem;
+    }
+
+    .program-card-content {
+        padding: 1.5rem;
+    }
+}
