@@ -965,3 +965,434 @@ footer {
         font-size: 1.5rem;
     }
 }
+
+/* About Project Section */
+.about-project {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.about-header {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-lead {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+/* Directions Section */
+.directions {
+    padding: 3rem 1rem;
+}
+
+.direction-blocks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.direction-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(196, 113, 237, 0.3);
+    transition: all 0.3s ease;
+}
+
+.direction-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(196, 113, 237, 0.5);
+    box-shadow: 0 20px 40px rgba(196, 113, 237, 0.4);
+}
+
+.direction-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.direction-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.direction-desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.direction-list {
+    list-style: none;
+    padding: 0;
+}
+
+.direction-list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.direction-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #c471ed;
+    font-weight: bold;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.benefits-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 2rem 0 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.benefit-item {
+    background: linear-gradient(135deg, rgba(196, 113, 237, 0.15), rgba(138, 43, 226, 0.1));
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(196, 113, 237, 0.3);
+    transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(196, 113, 237, 0.5);
+    box-shadow: 0 15px 30px rgba(196, 113, 237, 0.3);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+/* Youth Programs Section */
+.youth-programs {
+    padding: 3rem 1rem;
+}
+
+.youth-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.youth-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 2px solid;
+    transition: all 0.3s ease;
+}
+
+.kids-program {
+    border-color: rgba(46, 204, 113, 0.4);
+}
+
+.kids-program:hover {
+    border-color: rgba(46, 204, 113, 0.6);
+    box-shadow: 0 20px 40px rgba(46, 204, 113, 0.3);
+    transform: translateY(-10px);
+}
+
+.teens-program {
+    border-color: rgba(52, 152, 219, 0.4);
+}
+
+.teens-program:hover {
+    border-color: rgba(52, 152, 219, 0.6);
+    box-shadow: 0 20px 40px rgba(52, 152, 219, 0.3);
+    transform: translateY(-10px);
+}
+
+.youth-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.youth-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.youth-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.youth-subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.youth-list {
+    list-style: none;
+    padding: 0;
+}
+
+.youth-list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 1rem 0;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.youth-list li:last-child {
+    border-bottom: none;
+}
+
+.youth-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #c471ed;
+    font-size: 1.5rem;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 2.5rem;
+    text-shadow: 0 0 20px rgba(196, 113, 237, 0.6);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid;
+}
+
+.cta-button.primary {
+    background: linear-gradient(135deg, #c471ed, #9b59b6);
+    color: #fff;
+    border-color: #c471ed;
+}
+
+.cta-button.primary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(196, 113, 237, 0.6);
+}
+
+.cta-button.secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-5px);
+}
+
+/* Events Page Styles */
+.event-section {
+    padding: 3rem 1rem;
+}
+
+.event-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.event-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(196, 113, 237, 0.6);
+}
+
+.event-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.event-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0;
+}
+
+.event-info-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(210, 105, 30, 0.3);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.event-info-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(210, 105, 30, 0.5);
+    box-shadow: 0 10px 25px rgba(210, 105, 30, 0.3);
+}
+
+.event-info-card .card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.event-info-card .card-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-info-card .card-value {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 700;
+}
+
+.event-info-card .card-link {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    color: #c471ed;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.event-info-card .card-link:hover {
+    color: #ff69b4;
+}
+
+.program-details {
+    margin-top: 3rem;
+}
+
+/* Responsive для новых секций */
+@media (max-width: 768px) {
+    .about-lead {
+        font-size: 1.3rem;
+    }
+
+    .direction-blocks {
+        grid-template-columns: 1fr;
+    }
+
+    .youth-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-title {
+        font-size: 2.2rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .event-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-lead {
+        font-size: 1.2rem;
+    }
+
+    .direction-title {
+        font-size: 1.5rem;
+    }
+
+    .youth-title {
+        font-size: 1.5rem;
+    }
+
+    .cta-title {
+        font-size: 1.8rem;
+    }
+
+    .event-title {
+        font-size: 1.8rem;
+    }
+}
