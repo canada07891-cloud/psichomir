@@ -1665,7 +1665,9 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform 0.4s ease;
+    display: block;
 }
 
 .team-card:hover .team-card-image {
@@ -1774,9 +1776,23 @@ footer {
         gap: 0;
     }
 
+    /* Портретная рамка: фиксированные пропорции, обрезка только снизу — лица всегда видны */
     .team-card-image-wrap {
-        height: 280px;
-        min-height: 240px;
+        height: auto;
+        min-height: 0;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+    }
+
+    .team-card-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .team-card:hover .team-card-image {
+        transform: none;
     }
 
     .team-card-content {
@@ -1797,8 +1813,9 @@ footer {
         gap: 2rem;
     }
 
+    /* Ещё более высокая рамка на маленьких экранах — больше лица в кадре */
     .team-card-image-wrap {
-        height: 260px;
+        aspect-ratio: 2 / 3;
     }
 
     .team-card-content {
