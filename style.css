@@ -387,6 +387,43 @@ body {
     border: 2px solid rgba(231, 76, 60, 0.4);
 }
 
+/* Список программы на странице М/Ж */
+.mj-day {
+    border-color: rgba(196, 113, 237, 0.35);
+}
+
+.mj-day .day-header {
+    border-bottom-color: rgba(196, 113, 237, 0.5);
+}
+
+.mj-day .day-header h3 {
+    color: #c471ed;
+    text-shadow: 0 0 15px rgba(196, 113, 237, 0.4);
+}
+
+.mj-program-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mj-program-list li {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.5;
+}
+
+.mj-program-list li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #c471ed;
+}
+
 /* Сессии */
 .sessions {
     display: flex;
@@ -1457,6 +1494,7 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top center;
     transition: transform 0.4s ease;
 }
 
@@ -1599,7 +1637,7 @@ footer {
     }
 
     .program-card-image {
-        height: 200px;
+        height: 280px;
     }
 
     .program-card-title {
