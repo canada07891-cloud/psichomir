@@ -1398,183 +1398,6 @@ footer {
 }
 
 /* ============================================
-   EVENT ANNOUNCEMENT (грядущее мероприятие)
-   ============================================ */
-
-.event-announcement {
-    padding: 2rem 1rem 4rem;
-}
-
-.event-announcement-card {
-    max-width: 900px;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(15px);
-    border-radius: 24px;
-    overflow: hidden;
-    border: 1px solid rgba(196, 113, 237, 0.35);
-    box-shadow: 0 12px 40px rgba(196, 113, 237, 0.2);
-    transition: all 0.35s ease;
-}
-
-.event-announcement-card:hover {
-    border-color: rgba(196, 113, 237, 0.5);
-    box-shadow: 0 20px 50px rgba(196, 113, 237, 0.3);
-}
-
-.event-announcement-image-wrap {
-    width: 100%;
-    max-height: 380px;
-    overflow: hidden;
-}
-
-.event-announcement-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    object-position: center top;
-}
-
-.event-announcement-body {
-    padding: 2rem 2.5rem 2.5rem;
-}
-
-.event-announcement-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #fff;
-    margin-bottom: 0.35rem;
-    line-height: 1.3;
-}
-
-.event-announcement-subtitle {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    color: rgba(196, 113, 237, 0.95);
-    font-weight: 600;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0.5px;
-}
-
-.event-announcement-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem 2rem;
-    margin-bottom: 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.event-announcement-meta p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.05rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0;
-}
-
-.event-meta-icon {
-    margin-right: 0.35rem;
-}
-
-.event-announcement-free {
-    color: #2ecc71 !important;
-    font-weight: 600;
-}
-
-.event-announcement-days {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.event-day-block {
-    background: rgba(255, 255, 255, 0.06);
-    border-radius: 16px;
-    padding: 1.25rem 1.5rem;
-    border: 1px solid rgba(196, 113, 237, 0.25);
-}
-
-.event-day-header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    align-items: baseline;
-    margin-bottom: 0.75rem;
-}
-
-.event-day-date {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #f39c12;
-}
-
-.event-day-theme {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.85);
-    font-style: italic;
-}
-
-.event-day-program {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.event-day-program li {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.9);
-    padding: 0.35rem 0;
-    padding-left: 1.25rem;
-    position: relative;
-    line-height: 1.5;
-}
-
-.event-day-program li::before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: #c471ed;
-}
-
-@media (max-width: 768px) {
-    .event-announcement-body {
-        padding: 1.5rem 1.5rem 2rem;
-    }
-
-    .event-announcement-title {
-        font-size: 1.5rem;
-    }
-
-    .event-announcement-subtitle {
-        font-size: 1.3rem;
-    }
-
-    .event-announcement-image-wrap {
-        max-height: 280px;
-    }
-}
-
-@media (max-width: 480px) {
-    .event-announcement-meta {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .event-day-block {
-        padding: 1rem 1.25rem;
-    }
-
-    .event-day-header {
-        flex-direction: column;
-    }
-}
-
-/* ============================================
    PROGRAMS CATALOG STYLES
    ============================================ */
 
@@ -1705,6 +1528,13 @@ footer {
     border-top: 1px solid rgba(210, 105, 30, 0.2);
 }
 
+.program-card-detail {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.4;
+}
+
 .program-card-link {
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -1730,6 +1560,16 @@ footer {
 .program-card-placeholder:hover {
     transform: none;
     box-shadow: none;
+}
+
+/* Карточка без ссылки (грядущее мероприятие) */
+.program-card-featured {
+    cursor: default;
+    text-decoration: none;
+}
+
+.program-card-featured .program-card-footer {
+    border-top-color: rgba(196, 113, 237, 0.2);
 }
 
 .placeholder-image {
