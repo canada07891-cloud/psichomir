@@ -1,5 +1,7 @@
 // Gallery photos array
 const photos = [
+    '1dd.jpeg',
+    '2dd.jpeg',
     'photo_2026-01-13_00-24-26.jpg',
     'photo_2026-01-13_00-24-28 (2).jpg',
     'photo_2026-01-13_00-24-28.jpg',
